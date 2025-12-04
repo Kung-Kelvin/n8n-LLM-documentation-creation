@@ -4,11 +4,13 @@ LLM implementation for creating documentations (Docx, PDF, and PPT)
 Tools:
 - [Claude Code 2.0.35](https://code.claude.com/docs/ja/overview)
   - Some sources present this as a better **coding** and **writing** alternative than GPT 
-  - Couldn't proceed with testing. Requires Claude Mxx or Pro account [See subscription](https://claude.ai/upgrade)
+  - Couldn't proceed with testing. Requires Claude Max or Pro account [See subscription](https://claude.ai/upgrade)
 - [N8N 1.118.2](https://docs.n8n.io)
   - Creating automations workflows
 - [ngrok](https://ngrok.com/docs/what-is-ngrok)
   -  For providing a HTTP for public exposure of codespace environment
+-  [Telegram](https://core.telegram.org/bots/api#setwebhook)
+   -  Using a bot for stablishing a GUI like interface
 
 # Codes
 |Tool|Step|Code|
@@ -21,7 +23,10 @@ Tools:
 |ngrok|*optional* setting webhook for N8N|`export WEBHOOK_URL=<obtained HTTP address>`|
 |N8N|Installation|`npm install n8n -g`|
 |N8N|Check Version|`n8n --version`|
-|N8N|Start Runtime|`n8n start`|
+|N8N|Start Runtime|`n8n start --tunnel`|
+|Telegram|Setting Webhook|`https://api.telegram.org/bot<API Token>/setWebhook?url=<obtained HTTP address>`|
+|Telegram|Checking Webhook|`https://api.telegram.org/bot<API Token>/getWebhookInfo`|
+
 
 <!--export WEBHOOK_URL=https://hypophosphorous-pseudomoralistic-rhys.ngrok-free.dev-->
 
